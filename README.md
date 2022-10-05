@@ -40,7 +40,13 @@ THEN the saved events persist
 
 ## Deployed Website and Repo Link
 
-<!-- add links here  -->
+Link to deployed website
+
+<!-- add link here  -->
+
+Link to GitHub Repo
+
+https://github.com/FelishaYuMacias/Third-Party-APIs-Work-Day-Scheduler
 
 ## Credits 
 
