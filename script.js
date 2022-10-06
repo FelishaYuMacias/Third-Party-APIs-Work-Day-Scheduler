@@ -1,6 +1,18 @@
-var saveBtn = $('#saveBtn')
-var text = $("text")
-var textDisplay = text.text()
+var saveBtn = $('.saveBtn')
+var text = $(".text").val()
+var nine =$('#nine')
+var ten =$('#ten')
+var eleven =$('#eleven')
+var twelve =$('#twelve')
+var one =$('#one')
+var two =$('#two')
+var three =$('#three')
+var four =$('#four')
+var five =$('#five')
+
+// var textDisplay = text.text()
+var currentHour = moment().hour()
+
 // WHEN I open the planner
 // THEN the current day is displayed at the top of the calendar
 // create variable referencing the place the date will display in html
@@ -32,13 +44,13 @@ function displayCurrentDay () {
 // TODO: WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage
     //write function for saving input to local storage
-    // function saveText (){
-    //     event.preventDefault()
-    //     if (text !== null) {
-    //         localStorage.setItem("text", textDisplay)
-    //     }
-    //     text.append(textDisplay)
-    // }
+    function saveText (){
+        event.preventDefault()
+        if (text !== null) {
+            localStorage.setItem("text", textDisplay)
+        }
+        text.append(textDisplay)
+    }
     //add event listener for buttons that save to local storage
     saveBtn.on('click', saveText)
 // TODO: WHEN I refresh the page
