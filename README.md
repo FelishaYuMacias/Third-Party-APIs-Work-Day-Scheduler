@@ -8,14 +8,15 @@ Create a simple calendar application that allows a user to save events for each 
 You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
 
 ## User Story
-
-
+```md
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
+```
 
 ## Acceptance Criteria
 
+```md
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
@@ -29,32 +30,48 @@ WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
-
+```
 ## Usage
 
-<!-- Explain how to use website/application  -->
+Click in box next to time you want to fill.
+Hours in the past are grey, current hour is red, future hours are green.
+Type your task(s) for that hour.
+Click the blue save button to save your entry. Even when you refresh the page your information stays.
+When you are done for the day click the blue Clear Day to start again.
 
 ## Screenshots
 
-<!-- ![alt text](assets/images/screenshot.png)  -->
+[Screenshot of Page](./Screenshot.png)
 
 ## Deployed Website and Repo Link
 
 Link to deployed website
 
-<!-- add link here  -->
+https://felishayumacias.github.io/Third-Party-APIs-Work-Day-Scheduler/
 
 Link to GitHub Repo
 
 https://github.com/FelishaYuMacias/Third-Party-APIs-Work-Day-Scheduler
 
 ## Credits 
+ 
+ ### API's used
 
-<!-- List your collaborators, if any, with links to their GitHub profiles.
+Font Awesome - https://fontawesome.com -for "save" image
+https://use.fontawesome.com/releases/v5.8.1/css/all.css
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+Bootstrap - https://getbootstrap.com/ - for layout/content
+https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
 
-If you followed tutorials, include links to those here as well. -->
+Google Fonts - https://fonts.google.com/ - for font used
+https://fonts.googleapis.com/css?family=Open+Sans&display=swap
+
+jQuery - https://jqueryui.com/ - for layout/widgets/effects
+https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+
+
+Moment.js -https://momentjs.com/docs/#/displaying/ - for current date/time
+https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js
 
 ## License
 
