@@ -10,6 +10,10 @@ var four =$('#hour16')
 var five =$('#hour17')
 var textarea = $(".form-control")
 
+var timeArray = [nine, ten, eleven, twelve, one, two, three, four, five]
+
+var text;
+var hourSpan;
 // var textDisplay = text.text()
 var currentHour = moment().hour()
 
@@ -37,22 +41,22 @@ displayCurrentDay ()
 //future times are green
 
 function colors() {
-      
-    textarea.each(function () {
-      var timeSelected = parseInt($(this).attr("id").split("hour")[1]);
-      hour = parseInt(timeSelected);  
-        console.log(currentHour);
-        console.log(hour)
-        console.log("==============")
-        if (currentHour > hour) {
-            $(this).addClass("past");
-        } else if (currentHour < hour) {
-            $(this).addClass("future");
-        } else {
-            $(this).addClass("present");
+    for (let i=0; i < timeArray.length; i++) {
+        // timeArray[i].removeClass("future past present")
+        timeArray[i].setAttribute("class", "present");
+        // if (currentHour > timeArray[i+1]){
+        //     timeArray[i].setAttribute("class", "past");
+
+        // } else if (currentHour === timeArray[i+1]) {
+        //     timeArray[i].setAttribute("class", "present");
+
+        // } else {
+
+        //     timeArray[i].setAttribute("class", "future");
         }
-    });
-  }
+    }
+
+      
 
 // WHEN I click into a timeblock
 // THEN I can enter an event
@@ -75,7 +79,7 @@ function saveText (event){
     //add event listener for buttons that save to local storage
     saveBtn.on('click', saveText)
     
-    // TODO: WHEN I refresh the page
+    // WHEN I refresh the page
     // THEN the saved events persist
     function refresh () {
         console.log("Current Hour " + currentHour);
@@ -99,5 +103,3 @@ colors ()
 
 
     
-
-
