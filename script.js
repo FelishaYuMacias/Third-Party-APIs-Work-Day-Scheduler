@@ -1,6 +1,6 @@
 var saveBtn = $('.saveBtn')
-var nine =$('#hour9')
-var ten =$('#hour10')
+var nineId =$('#hour9')
+var tenId =$('#hour10')
 var eleven =$('#hour11')
 var twelve =$('#hour12')
 var one =$('#hour13')
@@ -9,6 +9,17 @@ var three =$('#hour15')
 var four =$('#hour16')
 var five =$('#hour17')
 var textarea = $(".form-control")
+
+//array variables
+var nine =$('#hr9')
+var ten =$('#hr10')
+var eleven =$('#hr11')
+var twelve =$('#hr12')
+var one =$('#hr13')
+var two =$('#hr14')
+var three =$('#hr15')
+var four =$('#hr16')
+var five =$('#hr17')
 
 var timeArray = [nine, ten, eleven, twelve, one, two, three, four, five]
 
@@ -39,7 +50,7 @@ displayCurrentDay ()
 //past times are grey
 //current time is red
 //future times are green
-currentHour = 13
+
 function colors() {
     for (let i=0; i < timeArray.length; i++) {
         // timeArray[i].removeClass("future past present")
@@ -94,13 +105,16 @@ function saveText (event){
         $("#hour15 .text").val(localStorage.getItem("hour15"));
         $("#hour16 .text").val(localStorage.getItem("hour16"));
         $("#hour17 .text").val(localStorage.getItem("hour17"));
-  
-} 
-        //add recall from local storage
+        
+    } 
+    //add recall from local storage
 $(document).ready (function (){
 refresh()
 colors ()
 } )
 
-
-    
+// Button for clear the day
+$("#clearDay").on("click", function(){
+    localStorage.clear();
+    refresh()
+  }) 
