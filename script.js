@@ -34,28 +34,29 @@ displayCurrentDay ()
 //create 8 timeblocks for 9a-5pm
 //see html lines 32-86
 
-// TODO: WHEN I view the timeblocks for that day
+// WHEN I view the timeblocks for that day
 // THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 //past times are grey
 //current time is red
 //future times are green
-
+currentHour = 13
 function colors() {
     for (let i=0; i < timeArray.length; i++) {
         // timeArray[i].removeClass("future past present")
-        timeArray[i].setAttribute("class", "present");
-        // if (currentHour > timeArray[i+1]){
-        //     timeArray[i].setAttribute("class", "past");
+        // timeArray[i].attr("class", "present form-control col-10 text");
+        if (currentHour > timeArray[i].attr("data-time")){
+            timeArray[i].attr("class", "past form-control col-10 text");
 
-        // } else if (currentHour === timeArray[i+1]) {
-        //     timeArray[i].setAttribute("class", "present");
+        } else if (currentHour == timeArray[i].attr("data-time")) {
+            timeArray[i].attr("class", "present form-control col-10 text");
 
-        // } else {
+        } else {
 
-        //     timeArray[i].setAttribute("class", "future");
+            timeArray[i].attr("class", "future form-control col-10 text");
         }
+        console.log (timeArray[i].attr("data-time"))
     }
-
+}
       
 
 // WHEN I click into a timeblock
