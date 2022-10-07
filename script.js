@@ -34,8 +34,10 @@ var currentHour = moment().hour()
 var currentDay = $('#currentDay')
 //create function for moment that formats the date and displays it on the page
 function displayCurrentDay () {
-    var now = moment().format('dddd, MMMM Do, YYYY')
+    var timeInterval = setInterval(function () {
+    var now = moment().format('dddd, MMMM Do, YYYY[at] hh:mm:ss A')
     currentDay.text(now)
+      })
 } 
 //call the function so it shows up on the page
 displayCurrentDay ()
